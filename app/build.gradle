@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.cesarvaliente.hipster"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+        vectorDrawables.useSupportLibrary = true
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.includeAndroidResources = true
+    }
+    sourceSets {
+        main {
+            java.srcDirs += 'src/main/kotlin'
+            res.srcDirs += 'src/main/res'
+            test.java.srcDirs += 'src/test/kotlin'
+            androidTest.java.srcDirs += 'src/androidTest/kotlin'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation androidx.appcompat
+    implementation androidx.legacySupport
+    implementation androidx.material
+    implementation androidx.constraintLayout
+    implementation androidx.navigationFragment
+    implementation androidx.navigationUi
+
+    implementation kotlinDependencies.kotlinStdlib
+    implementation kotlinDependencies.coroutinesCore
+    implementation kotlinDependencies.coroutinesAndroid
+
+    testImplementation unitTest.junit
+    androidTestImplementation androidTest.testRunner
+    androidTestImplementation androidTest.espressoCore
+}
