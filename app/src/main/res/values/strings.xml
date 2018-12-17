@@ -16,4 +16,6 @@
     <string name="to_navigation_shared">to_navigation_shared</string>
     <string name="navigation_2_1">navigation_2_1</string>
     <string name="navigation_shared">navigation_shared</string>
+    <string name="navigation">Navigation</string>
+    <string name="data_binding">Data binding</string>
 </resources>
