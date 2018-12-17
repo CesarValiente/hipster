@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_1_Fragment">
+
+    <fragment
+        android:id="@+id/nav_1_Fragment"
+        android:name="com.cesarvaliente.hipster.navigation.Nav_1_Fragment"
+        android:label="Nav_1_Fragment" >
+        <action
+            android:id="@+id/action_nav_1_Fragment_to_nav_2_Fragment"
+            app:destination="@id/nav_2_Fragment" />
+        <action
+            android:id="@+id/action_nav_1_Fragment_to_nav_3_0_Fragment"
+            app:destination="@id/nav_3_0_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_2_Fragment"
+        android:name="com.cesarvaliente.hipster.navigation.Nav_2_Fragment"
+        android:label="Nav_2_Fragment" >
+        <action
+            android:id="@+id/action_nav_2_Fragment_to_nav_2_1_Fragment"
+            app:destination="@id/nav_2_1_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_2_1_Fragment"
+        android:name="com.cesarvaliente.hipster.navigation.Nav_2_1_Fragment"
+        android:label="Nav_2_1_Fragment" >
+        <action
+            android:id="@+id/action_nav_2_1_Fragment_to_navSharedFragment"
+            app:destination="@id/navSharedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navSharedFragment"
+        android:name="com.cesarvaliente.hipster.navigation.NavSharedFragment"
+        android:label="NavSharedFragment" />
+    <fragment
+        android:id="@+id/nav_3_0_Fragment"
+        android:name="com.cesarvaliente.hipster.navigation.Nav_3_0_Fragment"
+        android:label="Nav_3_0_Fragment" >
+        <action
+            android:id="@+id/action_nav_3_0_Fragment_to_navSharedFragment"
+            app:destination="@id/navSharedFragment" />
+    </fragment>
+</navigation>

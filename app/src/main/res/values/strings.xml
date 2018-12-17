@@ -6,4 +6,14 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string name="navigation_1">Navigation 1</string>
+    <string name="to_navigation_2">To navigation 2</string>
+    <string name="to_navigation_3">To navigation 3</string>
+    <string name="navigation_2">navigation_2</string>
+    <string name="to_navigation_2_1">to_navigation_2_1</string>
+    <string name="navigation_3">navigation_3</string>
+    <string name="to_navigation_shared">to_navigation_shared</string>
+    <string name="navigation_2_1">navigation_2_1</string>
+    <string name="navigation_shared">navigation_shared</string>
 </resources>
