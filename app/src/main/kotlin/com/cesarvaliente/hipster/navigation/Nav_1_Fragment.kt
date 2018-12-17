@@ -15,13 +15,13 @@ class Nav_1_Fragment : Fragment() {
         return inflater.inflate(R.layout.nav_1_layout, container, false)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         bindViews()
     }
 
     private fun bindViews() {
-        to_navigation_2_0.setOnClickListener { Navigation.createNavigateOnClickListener(R.id.nav_2_Fragment) }
+        to_navigation_2_0.setOnClickListener { Navigation.findNavController(it).navigate(R.id.nav_2_0_Fragment) }
         to_navigation_3_0.setOnClickListener { Navigation.findNavController(it).navigate(R.id.nav_3_0_Fragment) }
     }
 }

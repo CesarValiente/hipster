@@ -15,8 +15,8 @@ class Nav_2_1_Fragment : Fragment() {
         return inflater.inflate(R.layout.nav_2_1_layout, container, false)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         bindViews()
     }
 
