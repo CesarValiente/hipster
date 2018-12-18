@@ -58,20 +58,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
-        when (item.itemId) {
+        val finalHostId = when (item.itemId) {
             R.id.navigation -> {
-                val finalHost = NavHostFragment.create(R.navigation.nav_graph)
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.nav_host_layout, finalHost)
-                    .setPrimaryNavigationFragment(finalHost)
-                    .commit()
+                R.navigation.navigation_graph
             }
             R.id.data_binding -> {
-
+                R.navigation.databinding_graph
+            }
+            else -> {
+                null
             }
         }
+        finalHostId?.let { setupNavigationFragment(it) }
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    private fun setupNavigationFragment(finalHostId: Int) {
+        val finalHost = NavHostFragment.create(finalHostId)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.nav_host_layout, finalHost)
+            .setPrimaryNavigationFragment(finalHost)
+            .commit()
     }
 }

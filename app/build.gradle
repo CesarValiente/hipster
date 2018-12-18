@@ -15,6 +15,9 @@ android {
         testInstrumentationRunner rootProject.ext.testInstrumentationRunner
         vectorDrawables.useSupportLibrary = true
     }
+    dataBinding {
+        enabled = true
+    }
     testOptions {
         unitTests.returnDefaultValues = true
         unitTests.includeAndroidResources = true
