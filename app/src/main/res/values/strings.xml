@@ -18,4 +18,5 @@
     <string name="navigation_shared">navigation_shared</string>
     <string name="navigation">Navigation</string>
     <string name="data_binding">Data binding</string>
+    <string name="view_model">View Model</string>
 </resources>

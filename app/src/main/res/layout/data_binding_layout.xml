@@ -7,6 +7,10 @@
         <variable
             name="user"
             type="com.cesarvaliente.hipster.databinding.User" />
+
+        <variable
+            name="handlers"
+            type="com.cesarvaliente.hipster.databinding.DataBindingFragment" />
     </data>
 
     <LinearLayout
@@ -38,5 +42,11 @@
             android:text="@{String.valueOf(user.age)}"
             android:textSize="20sp"
             tools:text="38" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handlers::onUserNameBtnClick}"
+            android:text="@{user.name}" />
     </LinearLayout>
 </layout>

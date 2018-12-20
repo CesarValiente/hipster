@@ -10,5 +10,8 @@
         <item
             android:id="@+id/data_binding"
             android:title="@string/data_binding" />
+        <item
+            android:id="@+id/view_model"
+            android:title="@string/view_model" />
     </group>
 </menu>
